@@ -12,13 +12,10 @@ const Cart = (props) => {
       {showcart && (
         <Card className={classes.cart}>
           <h2>Your Shopping Cart</h2>
-          <ul>
-            {Items.map((item) => (
-              <CartItem
-              key={item.id}
-                item= {item}
-              />
-            ))}
+          <ul>{Items.map((item) => (
+              <CartItem key={item.id} item={item} />
+            )) }
+       
           </ul>
         </Card>
       )}
